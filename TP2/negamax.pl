@@ -179,8 +179,7 @@ main :-
 	play_and_display(A,Ini,2,[B5,V5]),
 	play_and_display(J,Ini,2,[B6,V6]),
 	play_and_display(A,Ini,2,[B7,V7]),
-	play_and_display(J,Ini,2,[B8,V8]),
-	play_and_display(J,Ini,2,[B9,V9]),
+	play_and_display(J,Ini,2,[B8,V8]).
 
 
 
