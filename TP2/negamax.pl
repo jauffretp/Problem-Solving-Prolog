@@ -112,10 +112,10 @@ successeurs(J,Etat,Succ) :-
 
 loop_negamax(_,_, _  ,[                ],[			    ]).
 loop_negamax(J,P,Pmax,[[Coup,Suiv]|Succ],[[Coup,Vsuiv]|Reste_Couples]) :-
-	loop_negamax(J,P,Pmax,Succ,Reste_Couples),
-	adversaire(J,A),
-	Pnew is P+1,
-	negamax(A,Suiv,Pnew,Pmax, [_,Vsuiv]).
+	loop_negamax(J,P,Pmax,Succ,Reste_Couples), %on itère jusqu'a la fin de la liste
+	adversaire(J,A), % on récupère l'adversaire
+	Pnew is P+1, %on incrémente la profondeur
+	negamax(A,Suiv,Pnew,Pmax, [_,Vsuiv]). %on applique negamax sur tout les elements de la liste et on récupère les valeurs 
 
 	/*
 
